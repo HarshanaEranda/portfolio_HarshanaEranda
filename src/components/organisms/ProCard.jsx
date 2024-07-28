@@ -5,12 +5,12 @@ const renderEducation = (Projects) => {
   return Projects.map((project, index) => {
     if (index % 2 === 0) {
      return (
-        <div  className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-3">
-          <div key={index}>
+        <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-3">
+          <div key={Projects[index].id}>
             <ProSubCard Project={project} />
           </div>
           {Projects[index + 1] && (
-            <div key={index+1} >
+            <div key={Projects[index+1].id} >
               <ProSubCard Project={Projects[index + 1]} />
             </div>
           )}

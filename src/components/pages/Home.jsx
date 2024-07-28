@@ -33,7 +33,7 @@ const Home = () => {
                 >
                   <FaGithub size="2rem" color="white" />
                 </a>
-                <a href={Email} className="flex justify-end col-start-2 row-start-1 pr-1">
+                <a href={`mailto:${Email}`} className="flex justify-end col-start-2 row-start-1 pr-1">
                   <FaEnvelope size="2rem" color="white" />
                 </a>
               </div>

@@ -43,18 +43,27 @@ const Form = () => {
     if (validateForm()) {
       try {
         // Send email using EmailJS
-        await emailjs.send(
-          serviceId,  // Replace with your EmailJS service ID
-          templateId, // Replace with your EmailJS template ID
-         { to_name: 'Harshana Eranda', // Replace with your name or the recipient's name
+        const response = await emailjs.send(
+          serviceId,  // EmailJS service ID
+          templateId, // EmailJS template ID
+         { to_name: 'Harshana Eranda', // your name or the recipient's name
           from_name: name,
           message: `Email: ${email}\nContact Number: ${number}\nMessage: ${message}`
          },
          userId// Replace with your EmailJS user ID
         );
+        if (response.status === 200) {
+          alert('Email sent successfully:');
+          navigate("/");
+
+          // Handle success (e.g., show a success message to the user)
+        } else {
+          alert('Email failed to send:') ;
+          // Handle failure (e.g., show an error message to the user)
+        }
 
         // If email sent successfully, navigate to home
-        navigate("/home");
+        // navigate("/");
       } catch (error) {
         setErrors({ form: "Failed to send message. Please try again." });
         // console.error("EmailJS error:", error);
