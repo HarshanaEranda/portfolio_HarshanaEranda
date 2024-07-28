@@ -1,0 +1,6 @@
+.home-container{
+    @apply grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 md:grid-flow-col gap-4}
+
+/* .home-col{
+   @layer col-span-2
+} */

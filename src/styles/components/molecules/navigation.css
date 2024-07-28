@@ -1,0 +1,32 @@
+/* Custom styles for the navigation bar
+.nav-link {
+    @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+  }
+   */
+
+   /* Custom styles for the navigation bar */
+.nav-link {
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+}
+.nav-outside{
+  @apply p-3;
+}
+
+/* Additional styles */
+.nav-container {
+  @apply flex justify-between items-center bg-black h-16 p-2;
+}
+
+.nav-brand {
+  @apply text-white font-bold text-xl;
+}
+
+.nav-menu {
+  @apply hidden md:flex items-baseline space-x-4;
+}
+.nav-link-mobile{
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium 
+}
+.nav-toggle-button{
+  @apply text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white 
+}
